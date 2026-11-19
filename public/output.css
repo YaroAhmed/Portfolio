@@ -11,6 +11,8 @@
     --color-red-400: oklch(70.4% 0.191 22.216);
     --color-yellow-400: oklch(85.2% 0.199 91.936);
     --color-green-400: oklch(79.2% 0.209 151.711);
+    --color-blue-400: oklch(70.7% 0.165 254.624);
+    --color-pink-400: oklch(71.8% 0.202 349.761);
     --spacing: 0.25rem;
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
@@ -167,11 +169,59 @@
   }
 }
 @layer utilities {
+  .m-auto {
+    margin: auto;
+  }
+  .mx-3 {
+    margin-inline: calc(var(--spacing) * 3);
+  }
+  .mx-30 {
+    margin-inline: calc(var(--spacing) * 30);
+  }
+  .my-\[100\%\] {
+    margin-block: 100%;
+  }
+  .my-auto {
+    margin-block: auto;
+  }
+  .mb-\[100\%\] {
+    margin-bottom: 100%;
+  }
   .flex {
     display: flex;
   }
   .table {
     display: table;
+  }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
+  }
+  .h-30 {
+    height: calc(var(--spacing) * 30);
+  }
+  .h-screen {
+    height: 100vh;
+  }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
+  }
+  .w-30 {
+    width: calc(var(--spacing) * 30);
+  }
+  .w-\[30\%\] {
+    width: 30%;
+  }
+  .w-\[40\%\] {
+    width: 40%;
+  }
+  .w-auto {
+    width: auto;
+  }
+  .w-screen {
+    width: 100vw;
+  }
+  .flex-2 {
+    flex: 2;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -182,24 +232,51 @@
   .flex-col {
     flex-direction: column;
   }
+  .flex-row {
+    flex-direction: row;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .items-start {
+    align-items: flex-start;
+  }
   .justify-between {
     justify-content: space-between;
   }
   .justify-center {
     justify-content: center;
   }
+  .justify-start {
+    justify-content: flex-start;
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .bg-blue-400 {
+    background-color: var(--color-blue-400);
+  }
   .bg-green-400 {
     background-color: var(--color-green-400);
+  }
+  .bg-pink-400 {
+    background-color: var(--color-pink-400);
   }
   .bg-red-400 {
     background-color: var(--color-red-400);
   }
+  .bg-yellow-400 {
+    background-color: var(--color-yellow-400);
+  }
+  .p-\[30\%\] {
+    padding: 30%;
+  }
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
+  }
+  .py-\[100\%\] {
+    padding-block: 100%;
   }
   .text-center {
     text-align: center;
@@ -236,8 +313,35 @@
   .\[\&\>a\]\:px-20 > a {
     padding-inline: calc(var(--spacing) * 20);
   }
+  .\[\&\>a\]\:px-\[1\%\] > a {
+    padding-inline: 1%;
+  }
+  .\[\&\>a\]\:px-\[1\] > a {
+    padding-inline: 1;
+  }
+  .\[\&\>a\]\:px-\[5\%\] > a {
+    padding-inline: 5%;
+  }
+  .\[\&\>a\]\:px-\[20\%\] > a {
+    padding-inline: 20%;
+  }
+  .\[\&\>a\]\:px-\[120\] > a {
+    padding-inline: 120;
+  }
   .\[\&\>a\]\:py-3 > a {
     padding-block: calc(var(--spacing) * 3);
+  }
+  .\[\&\>div\]\:bg-yellow-400 > div {
+    background-color: var(--color-yellow-400);
+  }
+  .\[\&\>div\]\:px-20 > div {
+    padding-inline: calc(var(--spacing) * 20);
+  }
+  .\[\&\>div\]\:py-3 > div {
+    padding-block: calc(var(--spacing) * 3);
+  }
+  .\[\&\>siv\]\:m-auto > siv {
+    margin: auto;
   }
 }
 @property --tw-border-style {
